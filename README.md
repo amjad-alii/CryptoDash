@@ -1,58 +1,72 @@
-# CryptoDash
+# 🚀 CryptoDash
 
-CryptoDash is a real-time cryptocurrency dashboard web application that provides users with instant access to key market data, price tracking, and live updates for various cryptocurrencies.
+![Dashboard Screenshot](images/ScreenShot.png)
 
-## Features
-
-- Real-time display of total market cap, 24h trading volume, BTC dominance, and active cryptocurrencies
-- Live market data with price, 24-hour percentage change, market cap, and volume for individual coins
-- Dedicated sections for DeFi, NFTs, Gaming, and Web3 categories
-- Useful tools such as currency converter and price alerts
-- Clean, user-friendly interface optimized for quick crypto insights
-
-## Technology Stack
-
-- Frontend: HTML, CSS, JavaScript
-- Backend: Spring Boot (Java)
-- Database: MySQL (hosted on AWS RDS)
-- Deployment: AWS Elastic Beanstalk (for backend application)
-
-## Screenshots
-
-![Dashboard Screenshot](image/screenshot.png)
-
-## Installation
-
-1. Clone the repository:
-   https://github.com/amjad-alii/CryptoDash.git
-
-2. Import the project into your IDE and configure MySQL database connection using application properties.
-3. Build and run the Spring Boot backend:
-
-./mvnw clean install  <br> 
-./mvnw spring-boot:run
-
-5. Open the `index.html` file from the frontend folder in your browser to view the dashboard.
-
-## Deployment
-
-The backend Spring Boot app is deployed on AWS Elastic Beanstalk, and MySQL is hosted on AWS RDS for scalable and reliable infrastructure.
-
-## Usage
-
-Open the dashboard in your browser to track live cryptocurrency market data and use various sections and tools for monitoring crypto trends.
-
-## Contributing
-
-Contributions are welcome! Please open an issue to suggest improvements or report bugs.
-
-## Demo Video
-
-Watch the full demo of CryptoDash on YouTube:
-
-[CryptoDash Project Demo Video](https://youtu.be/vTLkbKsooak)
+**CryptoDash** is a real-time cryptocurrency dashboard web application that delivers instant access to market analytics, live prices, and trending crypto data in a modern, user-friendly interface.
 
 ---
 
-Created by Amjad
+## 📺 Demo Video
+
+[![Watch the Demo Video](https://img.shields.io/badge/YouTube-Watch%20Now-red?logo=youtube)](https://youtu.be/vTLkbKsooak)
+
+---
+
+## ✨ Features
+
+- Real-time display of total market cap, 24h trading volume, BTC dominance, and active cryptocurrencies
+- Live price, 24h % change, market cap, and volume for top coins
+- Sections for DeFi, NFTs, Gaming, and Web3
+- Tools for currency conversion and price alerts
+- Dark mode, mobile-responsive layout
+- Built with modern web standards for speed and accessibility
+
+---
+
+## ⚙️ Quick Start
+
+| Step | Command |
+|------|---------|
+| Clone the repository | `git clone https://github.com/amjad-alii/CryptoDash.git` |
+| Backend setup & run  | `cd crypto-backend`<br>`mvn clean install`<br>`java -jar target/*.jar` |
+| Frontend view        | Open `index.html` in your browser |
+
+Configure database in `application.properties` for Spring Boot (MySQL hosted on AWS RDS).
+
+---
+
+## 📦 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Spring Boot (Java)
+- **Database:** MySQL (AWS RDS)
+- **Cloud Hosting:** AWS Elastic Beanstalk
+
+---
+
+
+---
+
+## 🤝 Contributing
+
+1. Fork this repo and clone your fork.
+2. Create a new branch for your feature/bugfix.
+3. Commit and push changes.
+4. Open a pull request describing your update!
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+---
+
+Created and maintained by Amjad.
+
+---
+
+*Need help? Open a GitHub issue or connect via [YouTube Demo Video](https://youtu.be/vTLkbKsooak) for walkthroughs and Q&A.*
+
+
 
