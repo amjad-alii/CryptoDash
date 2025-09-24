@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto News</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="logo">CryptoDash</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for coins...">
+    </div>
+    <div id="user-profile" class="user-profile">
+        <span id="user-name">Guest</span>
+        <button id="logout-btn" class="btn btn-primary ml-4">Logout</button>
+    </div>
+</header>
+
+<div class="main-container">
+    <aside class="side-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="market.html">Market Overview</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li class="menu-divider">Categories</li>
+                <li><a href="defi.html">DeFi</a></li>
+                <li><a href="nfts.html">NFTs</a></li>
+                <li><a href="gaming.html">Gaming</a></li>
+                <li><a href="web3.html">Web3</a></li>
+                <li class="menu-divider">Tools</li>
+                <li><a href="converter.html">Converter</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li class="menu-divider">Community</li>
+                <li><a href="articles.html">Articles</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <div class="page-header">
+            <h1>Latest Crypto News</h1>
+            <p>Stay up-to-date with the latest developments in the crypto world.</p>
+        </div>
+
+        <section id="latest-news-container" class="latest-news-container">
+            <p>Loading the latest news...</p>
+        </section>
+
+        <section class="older-news-section">
+            <h2>Older News</h2>
+            <div id="older-news-list" class="older-news-list">
+                <p>Loading older news...</p>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

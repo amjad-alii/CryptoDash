@@ -1,0 +1,61 @@
+/* Add these styles to your style.css or a dedicated auth.css file */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 65px);
+            padding: 2rem;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+            text-align: center;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .auth-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .google-signin-btn {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #4285F4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .google-signin-btn:hover {
+            background-color: #357ae8;
+        }
+
+        .google-signin-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .auth-card p {
+            margin-top: 1rem;
+            color: #ccc;
+        }
+
+        .auth-card p a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }

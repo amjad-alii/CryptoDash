@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="top-nav">
+    <div class="logo">CryptoDash</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for coins...">
+    </div>
+    <div id="user-profile" class="user-profile" style="display: none;">
+        <img id="profile-picture" src="" alt="User Avatar" class="w-10 h-10 rounded-full object-cover">
+        <span id="user-name" class="ml-2">Guest</span>
+        <button id="logout-btn" class="btn btn-primary ml-4">Logout</button>
+    </div>
+</header>
+
+    <div class="main-container">
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="market.html">Market Overview</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li class="menu-divider">Categories</li>
+                    <li><a href="defi.html">DeFi</a></li>
+                    <li><a href="nfts.html">NFTs</a></li>
+                    <li><a href="gaming.html">Gaming</a></li>
+                    <li><a href="web3.html">Web3</a></li>
+                    <li class="menu-divider">Tools</li>
+                    <li><a href="converter.html" class="active">Converter</a></li>
+                    <li><a href="alerts.html">Alerts</a></li>
+                    <li class="menu-divider">Community</li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="page-header">
+                <h1>Currency Converter</h1>
+                <p>Convert cryptocurrencies to fiat currencies in real-time.</p>
+            </div>
+
+            <section class="card tool-form">
+                <form id="converter-form">
+                    <div class="form-group">
+                        <label for="from-currency">From</label>
+                        <select id="from-currency">
+                            <option value="BTC">Bitcoin (BTC)</option>
+                            <option value="ETH">Ethereum (ETH)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="INR">Indian Rupee (INR)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to-currency">To</label>
+                        <select id="to-currency">
+                            <option value="INR">Indian Rupee (INR)</option>
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="BTC">Bitcoin (BTC)</option>
+                            <option value="ETH">Ethereum (ETH)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <div id="conversion-result" class="conversion-result">
+                    <p>Converted Value: <span id="result-value">0</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

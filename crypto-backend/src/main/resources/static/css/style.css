@@ -1,0 +1,795 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #22253a;
+    --text-color: #e0e0e0;
+    --accent-color: #6a5acd;
+    --positive-color: #4cd964;
+    --negative-color: #ff3b30;
+    --border-color: #33364f;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 65px);
+}
+
+.side-menu {
+    width: 250px;
+    background-color: var(--card-bg);
+    padding: 2rem 0;
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+}
+
+.side-menu ul {
+    list-style: none;
+}
+
+.side-menu a {
+    display: block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.side-menu a:hover,
+.side-menu a.active {
+    background-color: var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: calc(2rem - 4px);
+}
+
+.menu-divider {
+    padding: 1rem 2rem;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.metric-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.metric-card h3 {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.metric-card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.positive {
+    color: var(--positive-color);
+}
+
+.negative {
+    color: var(--negative-color);
+}
+
+/* Common Styles for all pages */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a4b99;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Market Table specific styles */
+.market-full-table .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.market-full-table .search-table input {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.market-full-table table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.coin-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Portfolio Page specific styles */
+.portfolio-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-card {
+    text-align: center;
+}
+
+.summary-card .summary-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.summary-card .summary-change {
+    font-weight: 600;
+}
+
+.chart-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-table {
+    margin-top: 2rem;
+}
+
+.add-asset-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.add-asset-form input {
+    flex-grow: 1;
+}
+
+/* Articles Page specific styles */
+.btn-publish {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-publish:hover {
+    background-color: #5a4b99;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.article-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card-content {
+    padding: 1.5rem;
+}
+
+.article-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.article-card p {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.publish-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.publish-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.publish-form input,
+.publish-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.publish-form textarea {
+    resize: vertical;
+}
+
+.publish-message {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--positive-color);
+    color: white;
+    border-radius: 8px;
+}
+
+.publish-message a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* New Styles for Alerts and Converter Pages */
+.tool-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.conversion-result {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.conversion-result #result-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.alerts-table table {
+    margin-top: 2rem;
+}
+
+.alerts-table .btn-delete {
+    background-color: var(--negative-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+    }
+
+    .search-bar {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .user-profile {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .side-menu {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0;
+    }
+
+    .side-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .side-menu li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .side-menu a {
+        padding: 0.75rem 1rem;
+        border-left: none;
+    }
+
+    .menu-divider {
+        display: none;
+    }
+
+    .market-full-table {
+        overflow-x: auto;
+    }
+
+    .market-full-table table {
+        min-width: 600px;
+    }
+}
+
+
+/* --- Article Details Page Styles --- */
+.article-details-container {
+    padding: 2rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.article-body p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* New styles for auth pages */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.auth-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.auth-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.auth-message.success {
+    background-color: var(--positive-color);
+    color: white;
+}
+
+.auth-message.error {
+    background-color: var(--negative-color);
+    color: white;
+}
+
+
+/* --- New Article Card Styles --- */
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.article-card {
+    position: relative;
+    display: block;
+    background: linear-gradient(135deg, #22253a 0%, #2e3247 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.article-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image {
+    transform: scale(1.05);
+}
+
+.article-content-wrapper {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.article-summary {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.delete-btn-wrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    color: white;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+/* --- New News Section Styles --- */
+.latest-news-container {
+    margin-bottom: 2rem;
+}
+
+.latest-news-card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #2e3247 0%, #3a405a 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.latest-news-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.latest-news-content {
+    padding: 2rem;
+}
+
+.latest-news-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.latest-news-summary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #a0a0a0;
+}
+
+.older-news-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.older-news-list {
+    list-style: none;
+}
+
+.older-news-item {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.older-news-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.older-news-title {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.older-news-summary {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .latest-news-image {
+        height: 200px;
+    }
+
+    .latest-news-content {
+        padding: 1rem;
+    }
+
+    .latest-news-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Add this to your style.css */
+.metric-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    word-break: break-all; /* Ensures long numbers wrap correctly */
+}
+
+/* Media query to reduce font size on smaller screens */
+@media (max-width: 1024px) {
+    .metric-card p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .metric-card p {
+        font-size: 1.25rem;
+    }
+}
+
+/* --- Redesigned Dashboard Search Bar --- */
+.table-header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the heading and search bar horizontally */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.table-header-center h2 {
+    margin-bottom: 1rem; /* Add some space between the heading and the search bar */
+}
+
+/* Redesigning the search input field */
+.search-input {
+    width: 100%; /* Make the input a little wider */
+    max-width: 400px; /* Set a max-width to prevent it from getting too large on big screens */
+    padding: 0.75rem 1.25rem; /* Increase padding for a more modern look */
+    border: 2px solid var(--border-color); /* Thicker border for better visibility */
+    border-radius: 30px; /* More rounded corners */
+    background-color: var(--card-bg); /* Use the card background color */
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none; /* Remove the default outline */
+    border-color: var(--accent-color); /* Highlight the border on focus */
+    box-shadow: 0 0 8px rgba(106, 90, 205, 0.5); /* Add a glow effect */
+}
+
+.data-table .search-table {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensure the search-table itself is centered */
+}
+
+.market-full-table .search-table {
+    margin-bottom: 1.5rem;
+}
+

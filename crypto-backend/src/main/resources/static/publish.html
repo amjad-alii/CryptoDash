@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish Article</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="top-nav">
+    <div class="logo">CryptoDash</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for coins...">
+    </div>
+    <div id="user-profile" class="user-profile" style="display: none;">
+        <img id="profile-picture" src="" alt="User Avatar" class="w-10 h-10 rounded-full object-cover">
+        <span id="user-name" class="ml-2">Guest</span>
+        <button id="logout-btn" class="btn btn-primary ml-4">Logout</button>
+    </div>
+</header>
+
+    <div class="main-container">
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="#">Market Overview</a></li>
+                    <li><a href="#">My Portfolio</a></li>
+                    <li class="menu-divider">Categories</li>
+                    <li><a href="#">DeFi</a></li>
+                    <li><a href="#">NFTs</a></li>
+                    <li><a href="#">Gaming</a></li>
+                    <li><a href="#">Web3</a></li>
+                    <li class="menu-divider">Tools</li>
+                    <li><a href="#">Converter</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li class="menu-divider">Community</li>
+                    <li><a href="articles.html" class="active">Articles</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="page-header">
+                <h1>Publish a New Article</h1>
+                <p>Share your insights with the community.</p>
+            </div>
+
+            <section class="card publish-form">
+                <form id="article-form">
+                    <div class="form-group">
+                        <label for="article-title">Title</label>
+                        <input type="text" id="article-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-image">Image URL</label>
+                        <input type="url" id="article-image" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="article-content">Article Content</label>
+                        <textarea id="article-content" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publish</button>
+                </form>
+                <div id="publish-message" class="publish-message hidden">
+                    <p>✅ Article published successfully!</p>
+                    <a href="articles.html">View Articles</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
