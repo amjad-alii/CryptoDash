@@ -19,7 +19,7 @@ CryptoDash is a real-time cryptocurrency dashboard web application that provides
 
 ## Screenshots
 
-![Dashboard Screenshot](./project.jpg)
+![Dashboard Screenshot](image/screenshot.png)
 
 ## Installation
 
